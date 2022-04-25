@@ -1,15 +1,16 @@
 
 public class LongestSubstring {
 	public static void main(String[] args) {
-		System.out.println(lengthOfLongestSubstring("abcabcbb"));
+		System.out.println(lengthOfLongestSubstring("aab"));
 	}
 
 	public static int lengthOfLongestSubstring(String s) {
 		char[] arr = s.toCharArray();
 		int longest = 0;
-
+		
+		search:
 		for (int i = 0; i < arr.length - 1; i++) {
-			jSearch:
+			//jSearch: 
 			for (int j = i + 1; j < arr.length; j++) {
 				for (int x = i; x < j; x++) {
 					if (arr[x] == arr[j]) {
@@ -17,23 +18,18 @@ public class LongestSubstring {
 							longest = j - i;
 							System.out.println("i= " + i + " j= " + j + " x= " + x);
 						}
-						break jSearch;
+						//break jSearch;
+						continue search;
 					}
 				}
-				/*if (arr[i] == arr[j]) {
-					if (j - i > longest) {
-						longest = j - i;
-						System.out.println("i= " + i + " j= " + j);
-					}
-					break;
-				} else*/ if ((j < arr.length - 1 && arr[j] == arr[j + 1]) || j == arr.length - 1) {
+				if ((j < arr.length - 1 && arr[j] == arr[j + 1]) || j == arr.length - 1) {
 					if (j - i + 1 > longest) {
 						longest = j - i + 1;
 						System.out.println("i= " + i + " j= " + j);
 					}
-					break jSearch;
+					//break jSearch;
+					continue search;
 				}
-
 			}
 		}
 
