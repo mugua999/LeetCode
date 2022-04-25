@@ -14,6 +14,7 @@ public class AddTwoNum {
 	public static LinkedList<Integer> addTwoNumbers(LinkedList<Integer> l1, LinkedList<Integer> l2) {
         LinkedList<Integer> ans = new LinkedList<>();
         
+        // too equalize the length of two lists
         int maxLength = Math.max(l1.size(), l2.size());
         System.out.println("max length = " + maxLength);
         if (l1.size() < maxLength) {
@@ -28,6 +29,8 @@ public class AddTwoNum {
         	}
         }
         
+        //calc the result of the 2 elements from the same position of two lists
+        //pass 1 to the next location if the result is over 10 and leave result % 10 in the current location
         for (int i = 0; i < maxLength; i++) {
         	int result = l1.get(i) + l2.get(i);
         	
