@@ -1,9 +1,12 @@
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Test {
 	public static void main(String[] args) {
-		int[] arr = new int[12];
-		
-		System.out.println(arr[5]);
+		boolean[] b = new boolean[10];
+		for (int i = 0; i < b.length; i++) {
+			System.out.println(b[i]);
+		}
 	}
 
 }
