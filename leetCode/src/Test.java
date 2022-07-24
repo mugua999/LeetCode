@@ -1,13 +1,12 @@
-
-
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Test {
 	public static void main(String[] args) {
-
-		
-		System.out.println(Math.ceil(9/2.0) == 5);
+		boolean[] b = new boolean[10];
+		for (int i = 0; i < b.length; i++) {
+			System.out.println(b[i]);
+		}
 	}
-	
+
 }

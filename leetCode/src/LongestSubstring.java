@@ -7,22 +7,27 @@ public class LongestSubstring {
 	}
 
 	public static int lengthOfLongestSubstring(String s) {
-		char[] arr = s.toCharArray();
-		int longest = 0;
+		int[] arr = new int[128];
+		int longest = 0, left = 0, right = 0;
 
-		for (int i = 0; i < arr.length; i++) {
-			Set<Character> set = new HashSet<>();
-			for (int j = i; j < arr.length; j++) {
-				if (set.contains(arr[j])) {
-					longest = Math.max(longest, set.size());
-					break;
-				}else {
-					set.add(arr[j]);
-					longest = Math.max(longest, set.size());
-				}	
+		while (right < s.length()) {
+			char r = s.charAt(right);
+			arr[r]++;
+			
+			while (arr[r] > 1) {
+				longest = (right - left > longest) ? right - left : longest;
+				char l = s.charAt(left);
+				arr[l]--;
+				left++;
 			}
+			
+			if (right == s.length() - 1) {
+				longest = (right - left + 1> longest) ? right - left + 1: longest;
+			}
+
+			right++;
 		}
 
-		return longest;
+		return (longest == 0) ? s.length() : longest;
 	}
 }
