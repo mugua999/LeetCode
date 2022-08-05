@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class RottenOrange {
 	public static void main(String[] args) {
-		int[][] grid = {{0}};
+		int[][] grid = {{1,2}};
 		RottenOrange ro = new RottenOrange();
 		
 		System.out.println(ro.orangesRotting(grid));
