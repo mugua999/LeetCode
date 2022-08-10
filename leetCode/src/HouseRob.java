@@ -44,6 +44,7 @@ public class HouseRob {
 				}
 			}
 			max = (earning > max) ? earning : max;
+			//this is a test line
 		}
     	
     	return max;
