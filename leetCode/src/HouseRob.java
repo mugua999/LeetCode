@@ -38,11 +38,11 @@ public class HouseRob {
 				System.out.print(locked[j] + " ");
 			}
 			System.out.println();
-			/*for (int j = i - 1; j <= i + 1; j++) {
+			for (int j = i - 1; j <= i + 1; j++) {
 				if (j >= 0 && j < locked.length) {
 					locked[i] = false;
 				}
-			}*/
+			}
 			max = (earning > max) ? earning : max;
 		}
     	
