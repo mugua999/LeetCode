@@ -5,11 +5,16 @@ import java.util.TreeSet;
 
 public class Test {
 	public static void main(String[] args) {
-		Integer[] arr = {1,8,3,6,4};
-		Arrays.sort(arr);
+		String str = Integer.toBinaryString(24);
+		String str2 = Integer.toBinaryString(25);
 		
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
+		int count = 0;
+		for (int i = 0; i < str.length(); i++) {
+			if(str.charAt(i) == '1') count++;
 		}
+		
+		System.out.println(str);
+		System.out.println(str2);
+		System.out.println(24 ^ 25);
 	}
 }
