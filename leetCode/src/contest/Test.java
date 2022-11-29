@@ -2,19 +2,13 @@ package contest;
 
 import java.util.Arrays;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Test {
 	public static void main(String[] args) {
-		String str = Integer.toBinaryString(24);
-		String str2 = Integer.toBinaryString(25);
+		int[] arr = {1,2,3,4,5};
 		
-		int count = 0;
-		for (int i = 0; i < str.length(); i++) {
-			if(str.charAt(i) == '1') count++;
-		}
-		
-		System.out.println(str);
-		System.out.println(str2);
-		System.out.println(24 ^ 25);
+		System.out.println(IntStream.of(arr).boxed().collect(Collectors.toSet()));
 	}
 }
