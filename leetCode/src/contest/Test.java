@@ -7,8 +7,10 @@ import java.util.stream.IntStream;
 
 public class Test {
 	public static void main(String[] args) {
-		int[] arr = {1,2,3,4,5};
+		int k = 10;
 		
-		System.out.println(IntStream.of(arr).boxed().collect(Collectors.toSet()));
+		int max = (int) ((-1+Math.sqrt(1+8*k)) / 2);
+		
+		System.out.println((int)(Math.log(4) / Math.log(2)));
 	}
 }
